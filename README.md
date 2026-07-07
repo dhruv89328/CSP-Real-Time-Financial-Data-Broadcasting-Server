@@ -19,18 +19,19 @@ This README shows how to build and run the multithreaded **C** server & client t
 
 make
 make clean
-
+<img src="MAKE.jpeg" width="400">
 ---
 
 ## Run
 
 ### Terminal 1 — Start server
 make run-server
+<img src="MAKERUN.jpeg" width="400">
 
 ### Terminal 2 — Start client
 make run-client
-# or connect to remote
-./client 192.168.1.10
+
+<img src="CLIENT.jpeg" width="400">
 
 ---
 
@@ -46,20 +47,9 @@ Command:
 AVAILABLE
 
 Output:
-═══════ AVAILABLE STOCKS (Simulated) ═══════
-Symbol  | Price    | Change
-----------------------------------------
-AAPL    | $ 150.00 | +0.00%
-GOOGL   | $2800.00 | +0.00%
-MSFT    | $ 300.00 | +0.00%
-TSLA    | $ 250.00 | +0.00%
-AMZN    | $3300.00 | +0.00%
-NFLX    | $ 450.00 | +0.00%
-META    | $ 320.00 | +0.00%
-NVDA    | $ 500.00 | +0.00%
-AMD     | $ 120.00 | +0.00%
-INTC    | $  45.00 | +0.00%
-════════════════════════════════════════
+
+<img src="AVAILABLE.jpeg" width="400">
+
 
 >
 
@@ -68,12 +58,11 @@ INTC    | $  45.00 | +0.00%
 ### 2) BUY <symbol> <qty>
 
 Command:
-BUY AAPL 10
+BUY AMZN 5
 
 Output:
-✓ BOUGHT 10 shares of AAPL at $150.00
-Total cost: $1500.00
-Remaining balance: $98500.00
+
+<img src="BUY.jpeg" width="400">
 
 >
 
@@ -87,13 +76,10 @@ ERROR: Insufficient funds. Need $150000.00, have $100000.00
 ### 3) SELL <symbol> <qty>
 
 Command:
-SELL AAPL 5
+SELL AMZN 4
 
-Output:
-✓ SOLD 5 shares of AAPL at $152.00
-Proceeds: $760.00
-Profit/Loss: +$10.00 (1.33%)
-New balance: $99260.00
+<img src="SELL.jpeg" width="400">
+
 
 >
 
@@ -108,19 +94,7 @@ ERROR: You only have 3 shares of AAPL
 Command:
 PORTFOLIO
 
-Output:
-╔══════════════════════════════════════════════════╗
-║           PORTFOLIO - User1                      ║
-╚══════════════════════════════════════════════════╝
-💰 Wallet: $99,260.00
-Holdings:
-Stock  | Qty | Avg Buy | Current | Value    | P/L
---------------------------------------------------------
-AAPL   |  5  | $150.00 | $152.00 | $760.00  | +1.33%
---------------------------------------------------------
-📊 Total Invested Cost: $750.00
-Portfolio Market Value: $760.00
-Total P/L: +$10.00
+<img src="PORTFOLIO.jpeg" width="400">
 
 >
 
@@ -128,22 +102,7 @@ Total P/L: +$10.00
 
 ### 5) SUBSCRIBE <symbol> [threshold]
 
-Command:
-SUBSCRIBE AAPL 2.5
-
-Output:
-✓ Subscribed to AAPL for price changes of 2.5% or more.
-
->
-
-Async Alerts:
-🔔 BUY ALERT: AAPL at $140.25 (-6.50% drop)
-
->
-
-🔔 SELL ALERT: AAPL at $160.00 (+6.67% rise)
-
->
+<img src="SUBSCRIBE.jpeg" width="400">
 
 ---
 
@@ -154,9 +113,7 @@ BUY AAPL 10
 PORTFOLIO
 SUBSCRIBE AAPL 2.0
 # alerts appear automatically
-SELL AAPL 5
-PORTFOLIO
-QUIT
+<img src="ALERT.jpeg" width="400">
 
 ---
 
